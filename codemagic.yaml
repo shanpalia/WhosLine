@@ -2,16 +2,22 @@ workflows:
   android-release:
     name: WhosLine Android Release
     max_build_duration: 120
-
     environment:
       android_signing:
         - paliaapk-release
       java: 17
-
     scripts:
-      - name: Build signed release APK
+      - name: Verify project and build signed release APK
         script: |
-          ./gradlew assembleRelease
-
+          echo "=== Project root ==="
+          pwd
+          echo "=== Gradle files ==="
+          ls -la
+          test -d app
+          test -f app/build.gradle.kts
+          echo "=== Gradle version ==="
+          gradle --version
+          echo "=== Building release APK ==="
+          gradle --no-daemon assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
