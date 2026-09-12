@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Main Center Icon (within 66dp safe zone 21..87) -->
+    <!-- Primary User Head -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,42m-9,0a9,9 0 1,1 18,0a9,9 0 1,1 -18,0" />
+    <!-- Primary User Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,68c0,-8.28 6.72,-15 15,-15c8.28,0 15,6.72 15,15v1H35v-1z" />
+    <!-- Secondary Connected User Head -->
+    <path
+        android:fillColor="#E2ECE6"
+        android:pathData="M66,45m-6,0a6,6 0 1,1 12,0a6,6 0 1,1 -12,0" />
+    <!-- Secondary Connected User Body -->
+    <path
+        android:fillColor="#E2ECE6"
+        android:pathData="M59,68c0,-4.5 3,-8.4 7.2,-9.5c2.3,2.8 5.8,4.5 9.8,4.5v5H59z" />
+    <!-- Active Status Pulse Beacon (Mint Green Online Indicator with white border) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,68m-7,0a7,7 0 1,1 14,0a7,7 0 1,1 -14,0" />
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M68,68m-5,0a5,5 0 1,1 10,0a5,5 0 1,1 -10,0" />
+</vector>

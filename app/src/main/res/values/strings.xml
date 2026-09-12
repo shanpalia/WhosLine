@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WhosLine</string>
+    <string name="app_title">WhosLine</string>
+    <string name="app_subtitle">By PaliaAPK HUB • Developer By shanpalia</string>
+    <string name="add_social_account">Add Social Account</string>
+    <string name="connected_accounts">Connected Accounts</string>
+    <string name="live_active_friends">Live Active Friends</string>
+    <string name="active_now">Active Now</string>
+    <string name="offline">Offline</string>
+</resources>
