@@ -1,11 +1,12 @@
 workflows:
   android-release:
     name: WhosLine Android Release
+    max_build_duration: 120
     instance_type: linux_x2
     environment:
+      android_signing:
+        - paliaapk-release
       java: 17
-    android_signing:
-      - paliaapk-release
     scripts:
       - name: Build signed release APK
         script: |
