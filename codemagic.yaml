@@ -2,15 +2,23 @@ workflows:
   android-release:
     name: WhosLine Android Release
     max_build_duration: 120
+
     environment:
       android_signing:
         - paliaapk-release
       java: 17
+
     scripts:
-      - name: Build signed release APK
+      - name: Build signed release APK with Gradle 9.3.1
         script: |
-          chmod +x ./gradlew
-          ./gradlew --version
-          ./gradlew --no-daemon assembleRelease
+          set -e
+          echo "Downloading Gradle 9.3.1..."
+          curl -fL --retry 3 --retry-delay 2 https://services.gradle.org/distributions/gradle-9.3.1-bin.zip -o /tmp/gradle-9.3.1-bin.zip
+          rm -rf /tmp/gradle-9.3.1
+          mkdir -p /tmp/gradle-9.3.1
+          unzip -q /tmp/gradle-9.3.1-bin.zip -d /tmp/gradle-9.3.1
+          /tmp/gradle-9.3.1/gradle-9.3.1/bin/gradle --version
+          /tmp/gradle-9.3.1/gradle-9.3.1/bin/gradle --no-daemon assembleRelease
+
     artifacts:
       - app/build/outputs/**/*.apk
