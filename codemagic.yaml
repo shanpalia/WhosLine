@@ -7,17 +7,10 @@ workflows:
         - paliaapk-release
       java: 17
     scripts:
-      - name: Verify project and build signed release APK
+      - name: Build signed release APK
         script: |
-          echo "=== Project root ==="
-          pwd
-          echo "=== Gradle files ==="
-          ls -la
-          test -d app
-          test -f app/build.gradle.kts
-          echo "=== Gradle version ==="
-          gradle --version
-          echo "=== Building release APK ==="
-          gradle --no-daemon assembleRelease
+          chmod +x ./gradlew
+          ./gradlew --version
+          ./gradlew --no-daemon assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
