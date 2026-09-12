@@ -26,3 +26,7 @@ View your app in AI Studio: https://ai.studio/apps/61abca7c-5031-43b6-8c3a-e17ce
 - Splash: white WhosLine splash with “By PaliaAPK HUB” and “Developer By shanpalia”.
 - Demo friend/account data has been removed; the app starts empty until real data is connected.
 - `codemagic.yaml` is included for a signed Android release workflow.
+
+## Codemagic
+This project uses the existing Codemagic signing identity `paliaapk-release`.
+No `instance_type` is specified, so Codemagic can use the instance available to the current billing plan.
