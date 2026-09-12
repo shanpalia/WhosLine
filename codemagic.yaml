@@ -6,8 +6,8 @@ workflows:
       java: 17
       groups:
         - google_play
-      android_signing:
-        - whosline_keystore
+     android_signing:
+  - paliaapk-release
     scripts:
       - name: Build signed release APK
         script: |
